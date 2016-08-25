@@ -15,6 +15,10 @@
 		840BEEA81D6E9EC9005B67D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840BEEA61D6E9EC9005B67D6 /* LaunchScreen.storyboard */; };
 		840BEEB31D6E9EC9005B67D6 /* audioSoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BEEB21D6E9EC9005B67D6 /* audioSoundTests.m */; };
 		840BEEBE1D6E9EC9005B67D6 /* audioSoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BEEBD1D6E9EC9005B67D6 /* audioSoundUITests.m */; };
+		840BEECC1D6E9F2E005B67D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BEECB1D6E9F2E005B67D6 /* AudioToolbox.framework */; };
+		840BEECF1D6E9F9D005B67D6 /* JFMyPlayerSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BEECE1D6E9F9D005B67D6 /* JFMyPlayerSound.m */; };
+		840BEEDD1D6ED401005B67D6 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 840BEEDA1D6ED401005B67D6 /* detection.aiff */; };
+		840BEEDE1D6ED401005B67D6 /* RBDMuteSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BEEDC1D6ED401005B67D6 /* RBDMuteSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		840BEEB91D6E9EC9005B67D6 /* audioSoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = audioSoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840BEEBD1D6E9EC9005B67D6 /* audioSoundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioSoundUITests.m; sourceTree = "<group>"; };
 		840BEEBF1D6E9EC9005B67D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840BEECB1D6E9F2E005B67D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		840BEECD1D6E9F9D005B67D6 /* JFMyPlayerSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMyPlayerSound.h; sourceTree = "<group>"; };
+		840BEECE1D6E9F9D005B67D6 /* JFMyPlayerSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMyPlayerSound.m; sourceTree = "<group>"; };
+		840BEEDA1D6ED401005B67D6 /* detection.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = detection.aiff; sourceTree = "<group>"; };
+		840BEEDB1D6ED401005B67D6 /* RBDMuteSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDMuteSwitch.h; sourceTree = "<group>"; };
+		840BEEDC1D6ED401005B67D6 /* RBDMuteSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDMuteSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840BEECC1D6E9F2E005B67D6 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 		840BEE8C1D6E9EC8005B67D6 = {
 			isa = PBXGroup;
 			children = (
+				840BEECB1D6E9F2E005B67D6 /* AudioToolbox.framework */,
 				840BEE971D6E9EC9005B67D6 /* audioSound */,
 				840BEEB11D6E9EC9005B67D6 /* audioSoundTests */,
 				840BEEBC1D6E9EC9005B67D6 /* audioSoundUITests */,
@@ -101,10 +113,13 @@
 		840BEE971D6E9EC9005B67D6 /* audioSound */ = {
 			isa = PBXGroup;
 			children = (
+				840BEED91D6ED401005B67D6 /* sound */,
 				840BEE9B1D6E9EC9005B67D6 /* AppDelegate.h */,
 				840BEE9C1D6E9EC9005B67D6 /* AppDelegate.m */,
 				840BEE9E1D6E9EC9005B67D6 /* ViewController.h */,
 				840BEE9F1D6E9EC9005B67D6 /* ViewController.m */,
+				840BEECD1D6E9F9D005B67D6 /* JFMyPlayerSound.h */,
+				840BEECE1D6E9F9D005B67D6 /* JFMyPlayerSound.m */,
 				840BEEA11D6E9EC9005B67D6 /* Main.storyboard */,
 				840BEEA41D6E9EC9005B67D6 /* Assets.xcassets */,
 				840BEEA61D6E9EC9005B67D6 /* LaunchScreen.storyboard */,
@@ -138,6 +153,16 @@
 				840BEEBF1D6E9EC9005B67D6 /* Info.plist */,
 			);
 			path = audioSoundUITests;
+			sourceTree = "<group>";
+		};
+		840BEED91D6ED401005B67D6 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				840BEEDA1D6ED401005B67D6 /* detection.aiff */,
+				840BEEDB1D6ED401005B67D6 /* RBDMuteSwitch.h */,
+				840BEEDC1D6ED401005B67D6 /* RBDMuteSwitch.m */,
+			);
+			path = sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840BEEA81D6E9EC9005B67D6 /* LaunchScreen.storyboard in Resources */,
+				840BEEDD1D6ED401005B67D6 /* detection.aiff in Resources */,
 				840BEEA51D6E9EC9005B67D6 /* Assets.xcassets in Resources */,
 				840BEEA31D6E9EC9005B67D6 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840BEEDE1D6ED401005B67D6 /* RBDMuteSwitch.m in Sources */,
+				840BEECF1D6E9F9D005B67D6 /* JFMyPlayerSound.m in Sources */,
 				840BEEA01D6E9EC9005B67D6 /* ViewController.m in Sources */,
 				840BEE9D1D6E9EC9005B67D6 /* AppDelegate.m in Sources */,
 				840BEE9A1D6E9EC9005B67D6 /* main.m in Sources */,
@@ -416,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = audioSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anxin.audioSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = audioSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anxin.audioSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +528,7 @@
 				840BEEC41D6E9EC9005B67D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		840BEEC51D6E9EC9005B67D6 /* Build configuration list for PBXNativeTarget "audioSoundTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +537,7 @@
 				840BEEC71D6E9EC9005B67D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		840BEEC81D6E9EC9005B67D6 /* Build configuration list for PBXNativeTarget "audioSoundUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +546,7 @@
 				840BEECA1D6E9EC9005B67D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
