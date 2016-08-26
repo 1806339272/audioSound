@@ -2,10 +2,7 @@
 Call the system mobile phone ring, play the system bell, judge whether the user is on the silent mode
 help:http://www.jianshu.com/p/ce8f1a890892
 
-/**
- *  初始化系统声音
- */
-
+  初始化系统声音
 -(id)initSystemSoundWithName:(NSString *)soundName SoundType:(NSString *)soundType
 {
     self = [super init];
